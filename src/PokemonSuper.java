@@ -1,6 +1,6 @@
 package src;
 
-public class PokemonSuper {
+public abstract class PokemonSuper {
     final String name;
     String nameOfTrainer;
     int level;
@@ -46,12 +46,12 @@ public class PokemonSuper {
     }
 
     public void speaks() {
-        System.out.println();
-    }  // can be overwritten //
+        System.out.println("lala");
+    }// can be overwritten ?? //
 
     public void eats() {
-        System.out.println();
-    } // can be overwritten //
+        System.out.println("nothing");
+    }
 
     public void printOutPokemonInfo() {
         System.out.println(name + " is being trained by " + nameOfTrainer + "." + name + "'s level is " + level + "."

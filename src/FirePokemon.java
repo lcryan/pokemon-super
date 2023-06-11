@@ -6,13 +6,19 @@ public class FirePokemon extends PokemonSuper {
     int fireTemperature;
     String fireSound;
 
+    String pokemonTalk;
 
-    public FirePokemon(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, int wins, int losses, int fireTemperature, String fireSound) {
+    String favouriteFood;
+
+
+    public FirePokemon(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, int wins, int losses, int fireTemperature, String fireSound, String pokemonTalk, String favouriteFood) {
         super(name, nameOfTrainer, level, healthPoints, experiencePoints);
         this.wins = wins;
         this.losses = losses;
         this.fireTemperature = fireTemperature;
         this.fireSound = fireSound;
+        this.pokemonTalk = pokemonTalk;
+        this.favouriteFood = favouriteFood;
     }
 
     public int getWins() {
@@ -40,6 +46,16 @@ public class FirePokemon extends PokemonSuper {
     }
 
     public void flameThrower() {
-        System.out.println(name + "flame thrower sound is " + fireSound);
+        System.out.println(name + "'s flame thrower sound is " + fireSound + " !");
+    }
+
+    @Override
+    public void speaks() {
+        System.out.println(name + " says " + pokemonTalk + ".");
+    }
+
+    @Override
+    public void eats() {
+        System.out.println(name + "likes to eat " + favouriteFood + ".");
     }
 }
