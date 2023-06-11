@@ -12,14 +12,12 @@ public abstract class PokemonSuper {
     String defence;
     String attack;
 
-/*
-    name, nameOfTrainer, level, healthPoints, experiencePoints, defence, attack, pokemonTalk, favouriteFood, beingAttacked
-*/
-
-
     boolean beingAttacked;
 
     FirePokemon firePokemon;
+    WaterPokemon waterPokemon;
+    GrassPokemon grassPokemon;
+    ElectricPokemon electricPokemon;
 
     public FirePokemon getFirePokemon() {
         return firePokemon;
@@ -27,6 +25,30 @@ public abstract class PokemonSuper {
 
     public void setFirePokemon(FirePokemon firePokemon) {
         this.firePokemon = firePokemon;
+    }
+
+    public WaterPokemon getWaterPokemon() {
+        return waterPokemon;
+    }
+
+    public WaterPokemon setWaterPokemon(WaterPokemon waterPokemon) {
+        return this.waterPokemon = waterPokemon;
+    }
+
+    public GrassPokemon getGrassPokemon() {
+        return grassPokemon;
+    }
+
+    public GrassPokemon setGrassPokemon(GrassPokemon grassPokemon) {
+        return this.grassPokemon = grassPokemon;
+    }
+
+    public ElectricPokemon getElectricPokemon() {
+        return electricPokemon;
+    }
+
+    public void setElectricPokemon(ElectricPokemon electricPokemon) {
+        this.electricPokemon = electricPokemon;
     }
 
     public PokemonSuper(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, String pokemonTalk, String favouriteFood, String defence, String attack, boolean beingAttacked) {
@@ -50,8 +72,8 @@ public abstract class PokemonSuper {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
+    public void setHealthPoints(int newHealthPoints) {
+        this.healthPoints = newHealthPoints;
     }
 
     public int getExperiencePoints() {
@@ -113,6 +135,6 @@ public abstract class PokemonSuper {
 
     public void printOutPokemonInfo() {
         System.out.println(name + " is being trained by " + nameOfTrainer + "." + name + "'s level is " + level + "."
-                + "The current health points are at " + healthPoints + "%" + " and the experience points are " + experiencePoints + ".");
+                + "The current health points are at " + healthPoints + " and the experience points are " + experiencePoints + ".");
     }
 }

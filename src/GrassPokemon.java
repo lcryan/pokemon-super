@@ -31,14 +31,24 @@ public class GrassPokemon extends PokemonSuper {
 
     public void callForHelp() {
         if (beingAttacked) {
-            System.out.println(name + " has to call " + friend + "." + name + "uses the secret call " + secretCall + ".");
+            System.out.println(name + " has to call " + friend + "." + name + " uses the secret call " + secretCall + ".");
         } else {
             System.out.println("Everything is quite right now. No need to call your friend " + name + ".");
         }
     }
 
-    public void boostHealthPoints() {
-
+    public void namePokemonFriend() {
+        System.out.println(name + "'s friend is " + friend + ".");
     }
 
+// here Override from SuperPokemon
+
+    @Override
+    public void speaks() {
+        System.out.println(name + "'s sound is " + pokemonTalk + ".");
+    }
+
+    public void eats() {
+        System.out.println(name + "'s absolute favourite food is " + favouriteFood + "!");
+    }
 }
