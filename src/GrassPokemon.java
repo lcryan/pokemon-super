@@ -2,23 +2,23 @@ package src;
 
 public class GrassPokemon extends PokemonSuper {
 
-    private String callFriend;
+    private String friend;
 
     private String secretCall;
 
 
-    public GrassPokemon(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, String pokemonTalk, String favouriteFood, String defence, String attack, boolean beingAttacked, String callFriend, String secretCall) {
+    public GrassPokemon(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, String pokemonTalk, String favouriteFood, String defence, String attack, boolean beingAttacked, String friend, String secretCall) {
         super(name, nameOfTrainer, level, healthPoints, experiencePoints, pokemonTalk, favouriteFood, defence, attack, beingAttacked);
-        this.callFriend = callFriend;
+        this.friend = friend;
         this.secretCall = secretCall;
     }
 
-    public String getCallFriend() {
-        return callFriend;
+    public String getFriend() {
+        return friend;
     }
 
-    public void setCallFriend(String callFriend) {
-        this.callFriend = callFriend;
+    public void setFriend(String friend) {
+        this.friend = friend;
     }
 
     public String getSecretCall() {
@@ -30,9 +30,15 @@ public class GrassPokemon extends PokemonSuper {
     }
 
     public void callForHelp() {
-if(beingAttacked) {
-    System.out.println(name + " has to call " + );
-}
+        if (beingAttacked) {
+            System.out.println(name + " has to call " + friend + "." + name + "uses the secret call " + secretCall + ".");
+        } else {
+            System.out.println("Everything is quite right now. No need to call your friend " + name + ".");
+        }
+    }
+
+    public void boostHealthPoints() {
+
     }
 
 }
