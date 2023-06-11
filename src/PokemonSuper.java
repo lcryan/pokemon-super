@@ -5,7 +5,6 @@ public class PokemonSuper {
     String nameOfTrainer;
     int level;
     private int healthPoints;
-
     private int experiencePoints;
 
     FirePokemon firePokemon;
@@ -53,6 +52,9 @@ public class PokemonSuper {
     public void eats() {
         System.out.println();
     } // can be overwritten //
-}
 
-//TODO : make a general info print about every Pokemon with name, name of the trainer and level.
+    public void printOutPokemonInfo() {
+        System.out.println(name + " is being trained by " + nameOfTrainer + "." + name + "'s level is " + level + "."
+                + "The current health points are at " + healthPoints + "%" + " and the experience points are " + experiencePoints + ".");
+    }
+}

@@ -1,6 +1,5 @@
 package src;
 
-// TODO : make this class an abrstact class and then add Pikachu.java, Charmander.java, Bulbasaur.java and Oddish.java //
 public class FirePokemon extends PokemonSuper {
     private int wins;
     private int losses;
@@ -36,12 +35,11 @@ public class FirePokemon extends PokemonSuper {
         if (fireTemperature > 150) {
             System.out.println("This is a win for " + name + "." + "The temperature of his fire lash was " + fireTemperature + "!");
         } else {
-            System.out.println(name + "lost.Maybe it is best to take a rest now.");
+            System.out.println(name + "lost.Maybe it is best to take a rest now to charge the pokemon's fire power.");
         }
     }
 
     public void flameThrower() {
         System.out.println(name + "flame thrower sound is " + fireSound);
-    } // this can be overwritten !!!
-
+    }
 }
