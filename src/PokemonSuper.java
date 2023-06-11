@@ -12,6 +12,11 @@ public abstract class PokemonSuper {
     String defence;
     String attack;
 
+/*
+    name, nameOfTrainer, level, healthPoints, experiencePoints, defence, attack, pokemonTalk, favouriteFood, beingAttacked
+*/
+
+
     boolean beingAttacked;
 
     FirePokemon firePokemon;
@@ -90,11 +95,11 @@ public abstract class PokemonSuper {
     }
 
     public void speaks() {
-        System.out.println(name + "says" + pokemonTalk);
+        System.out.println();
     }
 
     public void eats() {
-        System.out.println(favouriteFood);
+        System.out.println();
     }
 
 

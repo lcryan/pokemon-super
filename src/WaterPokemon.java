@@ -6,7 +6,7 @@ public class WaterPokemon extends PokemonSuper {
 
 
     public WaterPokemon(String name, String nameOfTrainer, int level, int healthPoints, int experiencePoints, String pokemonTalk, String favouriteFood, String defence, String attack, boolean beingAttacked, String secretWeapon, String secretWeakness) {
-        super(name, nameOfTrainer, level, healthPoints, experiencePoints, defence, attack, pokemonTalk, favouriteFood, beingAttacked);
+        super(name, nameOfTrainer, level, healthPoints, experiencePoints, pokemonTalk, favouriteFood, defence, attack, beingAttacked);
         this.secretWeapon = secretWeapon;
         this.secretWeakness = secretWeakness;
     }
@@ -38,7 +38,7 @@ public class WaterPokemon extends PokemonSuper {
     @Override
     public void fightStrategy() {
         if (beingAttacked) {
-            System.out.println(name + " won't use an attack method.");
+            System.out.println(name + " cannot remember his special attack method. You have to tell him to use " + secretWeapon + "!");
         } else {
             System.out.println(name + " will only put " + defence + " in place.");
         }

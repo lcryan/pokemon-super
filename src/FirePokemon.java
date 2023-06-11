@@ -45,4 +45,13 @@ public class FirePokemon extends PokemonSuper {
         System.out.println(name + "'s flame thrower sound is " + fireSound + " !");
     }
 
+    @Override
+
+    public void speaks() {
+        System.out.println(name + " says " + pokemonTalk + ".");
+    }
+
+    public void eats() {
+        System.out.println(name + " loves to eat " + favouriteFood + ".");
+    }
 }
